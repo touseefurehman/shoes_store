@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+*{
+    padding: 0%;
+    margin: 0%;
+}
+
+
+.card-text{
+    color: #40BFFF;
+    ;
+    font-weight: 700;
+    font-size: 18px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.card-title{
+    color: #223263;
+    font-weight: 700;
+    font-size: 18px;
+    font-family: 'Poppins', sans-serif;
+
+}
+
+.nav-link{
+    color: black;
+    font-weight: 700;
+    font-size: 22px;
+    font-family: 'Poppins', sans-serif;
+}
+.nav-link:hover{
+    color: #33A0FF;
+    ;
+}
+.nav-link.active{
+    color: #40BFFF !important;
+    ;
+}
+.nav-link:active {
+    color: #40BFFF !important; /* Optional: Change color when the tab is being clicked */
+}
+
+.running_sneekers{
+    width: 100%; background-color:#40BFFF ;
+}
+.running_sneekers h1{
+    font-weight: 500;
+    font-size: 55px;
+    font-family: 'Poppins', sans-serif;
+    color: white;
+}
+
+.shop-button{
+    border: 0px;
+    border-bottom: 3px solid white !important;
+    border-radius: 0%;
+    font-weight: 700;
+    font-size: 22px;
+    font-family: 'Poppins', sans-serif;
+    color: white;
+}
+.running_sneekers p{
+    font-weight: 300;
+    font-size: 22px;
+    font-family: 'Poppins', sans-serif;
+    color: white;
+}
+
+.shoes_image{
+    max-height:500px ;
+    max-width: 500px;
+    width: 100% ; 
+    position: absolute;
+    top: -80px;
+}
+
+.shipp_refund_support{
+    max-width: 400px;
+    width: 100%;
+}
+.shipping_image{
+    max-width: 100px;
+    width: 100%;
+}
+.shipp_refund_support h1{
+    font-size: 12px;
+}
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 1025px) {
+    .shoes_image{
+        max-height:500px ;
+        max-width: 450px;
+        width: 100% ; 
+      
+    }
+}
+@media (max-width: 925px) {
+    .shoes_image{
+        max-height:500px ;
+        max-width: 400px;
+        width: 100% ; 
+      
+    }
+}
+@media (max-width: 825px) {
+    .shoes_image{
+        max-height:500px ;
+        max-width: 350px;
+        width: 100% ; 
+      
+    }
+}
+@media (max-width: 768px) {
+    .shoes_image{
+        max-height:500px ;
+        max-width: 350px;
+        width: 100% ; 
+        position: static;
+    top: 0px;
+    /* align-items: center;
+    display: flex;
+    justify-content: center; */
+    }
+    .shoes-container{
+        text-align: center;
+    }
+}
