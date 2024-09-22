@@ -1,0 +1,190 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Grid Page</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Custom Styles */
+        .hero {
+            background-color: #80d0ff;
+            padding: 30px;
+            text-align: center;
+        }
+        .hero img {
+            width: 150px;
+        }
+        .product-card {
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s;
+        }
+        .product-card:hover {
+            transform: scale(1.05);
+        }
+        .filter-section {
+            background-color: #f9f9f9;
+            padding: 20px;
+        }
+        .footer {
+            background-color: #eaf0ff;
+            padding: 50px 0;
+        }
+        .pagination {
+            justify-content: center;
+        }
+        .filter-section a {
+            color: #007bff;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <div class="container">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">E-Comm</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Bags</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Sneakers</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Belt</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</div>
+    <!-- Hero Section -->
+    <div class="hero">
+        <h2>Adidas Men Running Sneakers</h2>
+        <p>Performance and design. Taken right to the edge.</p>
+        <img src="{%  static 'images/shoess.png' %}" alt="Adidas Sneaker">
+    </div>
+
+    <!-- Main Content Section -->
+    <div class="container my-5">
+        <div class="row">
+            <!-- Sidebar Filter -->
+            <aside class="col-md-3 filter-section">
+                <h5>Hot Deals</h5>
+                <ul class="list-unstyled">
+                    <li><a href="#">Nike</a></li>
+                    <li><a href="#">Adidas</a></li>
+                    <li><a href="#">Vans</a></li>
+                    <li><a href="#">All Stars</a></li>
+                    <li><a href="#">Airmax</a></li>
+                </ul>
+
+                <h5>Prices</h5>
+                <input type="range" class="custom-range" min="13.99" max="25.99">
+                <p>Range: $13.99 - $25.99</p>
+
+                <h5>Color</h5>
+                <div class="d-flex">
+                    <span class="badge badge-primary p-3 mr-2"></span>
+                    <span class="badge badge-danger p-3 mr-2"></span>
+                    <span class="badge badge-warning p-3 mr-2"></span>
+                    <span class="badge badge-dark p-3"></span>
+                </div>
+
+                <h5>Brand</h5>
+                <ul class="list-unstyled">
+                    <li><a href="#">Nike</a></li>
+                    <li><a href="#">Adidas</a></li>
+                    <li><a href="#">Siemens</a></li>
+                </ul>
+            </aside>
+
+            <!-- Product Grid -->
+            <div class="col-md-9">
+                <div class="row">
+                    <!-- Product Card -->
+                    <div class="col-md-4 mb-4">
+                        <div class="card product-card">
+                            <img src="{%  static 'images/shoess.png' %}" class="card-img-top" alt="Nike Air Max 270 React">
+                            <div class="card-body text-center">
+                                <h5 class="card-title">Nike Air Max 270 React</h5>
+                                <p class="card-text">$299.43 <span class="text-danger">$534.33 24% Off</span></p>
+                                <span class="badge badge-danger">HOT</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Repeat this for other products -->
+                    <div class="col-md-4 mb-4">
+                        <div class="card product-card">
+                            <img src="images/nike2.png" class="card-img-top" alt="Nike Air Max 270 React">
+                            <div class="card-body text-center">
+                                <h5 class="card-title">Nike Air Max 270 React</h5>
+                                <p class="card-text">$299.43 <span class="text-danger">$534.33 24% Off</span></p>
+                                <span class="badge badge-danger">HOT</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- More product cards... -->
+                </div>
+
+                <!-- Pagination -->
+                <nav aria-label="Page navigation">
+                    <ul class="pagination">
+                        <li class="page-item"><a class="page-link" href="#">1</a></li>
+                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                        <li class="page-item"><a class="page-link" href="#">4</a></li>
+                        <li class="page-item"><a class="page-link" href="#">5</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h5>Information</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms & Conditions</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5>Service</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#">Free Shipping</a></li>
+                        <li><a href="#">Refund Policy</a></li>
+                        <li><a href="#">Support 24/7</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5>Contact Us</h5>
+                    <ul class="list-unstyled">
+                        <li>123 Main St, Anytown, USA</li>
+                        <li>Email: info@ecomm.com</li>
+                        <li>Phone: +123-456-7890</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
