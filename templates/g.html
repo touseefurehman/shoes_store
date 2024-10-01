@@ -114,29 +114,19 @@
             <div class="col-md-9">
                 <div class="row">
                     <!-- Product Card -->
+                    {% for product in products %}
                     <div class="col-md-4 mb-4">
                         <div class="card product-card">
-                            <img src="{%  static 'images/shoess.png' %}" class="card-img-top" alt="Nike Air Max 270 React">
+                            <img src="{{ product.product_image.url }}" class="card-img-top" alt="Nike Air Max 270 React">
                             <div class="card-body text-center">
-                                <h5 class="card-title">Nike Air Max 270 React</h5>
-                                <p class="card-text">$299.43 <span class="text-danger">$534.33 24% Off</span></p>
+                                <h5 class="card-title">{{ product.name }}</h5>
+                                <p class="card-text">{{ product.price }}</p>
                                 <span class="badge badge-danger">HOT</span>
                             </div>
                         </div>
                     </div>
-                    <!-- Repeat this for other products -->
-                    <div class="col-md-4 mb-4">
-                        <div class="card product-card">
-                            <img src="images/nike2.png" class="card-img-top" alt="Nike Air Max 270 React">
-                            <div class="card-body text-center">
-                                <h5 class="card-title">Nike Air Max 270 React</h5>
-                                <p class="card-text">$299.43 <span class="text-danger">$534.33 24% Off</span></p>
-                                <span class="badge badge-danger">HOT</span>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- More product cards... -->
-                </div>
+                    {% endfor %}
+
 
                 <!-- Pagination -->
                 <nav aria-label="Page navigation">
